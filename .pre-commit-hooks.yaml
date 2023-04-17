@@ -1,0 +1,7 @@
+-   id: ansible-check-encrypted-secrets
+    name: Check Secrets Encrypted
+    description: This hook checks Ansible Vault secrets are encrypted
+    entry: bin/ansible-check-encrypted-secrets.sh
+    language: script
+    files: secrets.yml
+    types: [text]
