@@ -21,3 +21,9 @@
     language: script
     files: \.(tf)$
     types: [terraform]
+
+-   id: shellcheck
+    name: Test bash scripts with shellcheck
+    language: script
+    entry: bin/shellcheck.sh
+    types: [shell]
