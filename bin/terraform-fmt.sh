@@ -5,5 +5,6 @@
 set -e
 
 echo "Running pre-commit checks..."
-
-terraform fmt "$@"
+for FILE in "${@}"; do
+  terraform fmt "${FILE}"
+done
