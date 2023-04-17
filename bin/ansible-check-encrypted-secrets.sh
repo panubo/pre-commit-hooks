@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# LICENSE: The MIT License Copyright (c) 2023 Volt Grid Pty Ltd t/a Panubo
+
 # Checks that Ansible secret files (secret.yml) are actually encrypted
 
 set -e

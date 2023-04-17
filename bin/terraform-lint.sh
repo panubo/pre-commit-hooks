@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# LICENSE: The MIT License Copyright (c) 2023 Volt Grid Pty Ltd t/a Panubo
+
 # Runs Terraform Lint
 # Requires https://github.com/terraform-linters/tflint
 
