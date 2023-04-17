@@ -4,3 +4,7 @@ This repo contains configs and plugins for the [pre-commit](https://pre-commit.c
 framework.
 
 - `bin` - the plugins / pre-commit hooks.
+
+## Developing
+
+See https://pre-commit.com/index.html#developing-hooks-interactively

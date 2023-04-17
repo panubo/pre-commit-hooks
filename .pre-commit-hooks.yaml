@@ -5,3 +5,19 @@
     language: script
     files: secrets.yml
     types: [text]
+
+-   id: terraform-fmt
+    name: Check Terraform Format
+    description: This hook checks Terraform is formatteed correctly
+    entry: bin/terraform-fmt.sh
+    language: script
+    files: \.(tf)$
+    types: [terraform]
+
+-   id: terraform-lint
+    name: Check Terraform Lint
+    description: This hook checks Terraform lint
+    entry: bin/terraform-lint.sh
+    language: script
+    files: \.(tf)$
+    types: [terraform]
