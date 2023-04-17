@@ -7,3 +7,8 @@ repos:
     -   id: trailing-whitespace
     -   id: check-executables-have-shebangs
     -   id: check-shebang-scripts-are-executable
+
+-   repo: git@github.com:panubo/pre-commit-hooks.git
+    rev: v0.0.4
+    hooks:
+    -   id: shellcheck

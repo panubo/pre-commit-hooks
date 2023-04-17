@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Checks that Ansible secret files (secret.yml) are actually encrypted
+
 set -e
 
 is_encrypted() {
