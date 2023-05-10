@@ -1,14 +1,14 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
-    -   id: check-executables-have-shebangs
-    -   id: check-shebang-scripts-are-executable
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
 
--   repo: git@github.com:panubo/pre-commit-hooks.git
+  - repo: git@github.com:panubo/pre-commit-hooks.git
     rev: v0.0.4
     hooks:
-    -   id: shellcheck
+      - id: shellcheck

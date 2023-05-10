@@ -27,3 +27,17 @@
     language: script
     entry: bin/shellcheck.sh
     types: [shell]
+
+-   id: chart-testing
+    name: Test charts with helm/chart-testing
+    language: system
+    entry: ct lint
+    files: ^charts/
+    pass_filenames: false
+
+-   id: chart-testing-docker
+    name: Test charts with helm/chart-testing
+    language: docker_image
+    entry: quay.io/helmpack/chart-testing:v3.8.0 sh -c 'export HOME=/tmp; git config --global --add safe.directory /src; ct lint'
+    files: ^charts/
+    pass_filenames: false
