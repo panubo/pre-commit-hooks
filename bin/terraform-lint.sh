@@ -14,5 +14,5 @@ fi
 
 echo "Running pre-commit checks..."
 for FILE in "${@}"; do
-  tflint "${FILE}"
+  tflint --filter="${FILE}"
 done
