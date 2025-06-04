@@ -6,18 +6,18 @@
     files: secrets.yml
     types: [text]
 
--   id: terraform-fmt
-    name: Check Terraform Format
+-   id: tf-fmt
+    name: Check TF Format
     description: This hook checks Terraform is formatteed correctly
-    entry: bin/terraform-fmt.sh
+    entry: bin/tf-fmt.sh
     language: script
     files: \.(tf)$
     types: [terraform]
 
--   id: terraform-lint
-    name: Check Terraform Lint
+-   id: tf-lint
+    name: Check TF Lint
     description: This hook checks Terraform lint
-    entry: bin/terraform-lint.sh
+    entry: bin/tf-lint.sh
     language: script
     files: \.(tf)$
     types: [terraform]
