@@ -9,6 +9,6 @@ repos:
       - id: check-shebang-scripts-are-executable
 
   - repo: git@github.com:panubo/pre-commit-hooks.git
-    rev: v0.0.4
+    rev: v0.1.0
     hooks:
       - id: shellcheck
