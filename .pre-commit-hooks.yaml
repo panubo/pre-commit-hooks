@@ -12,7 +12,7 @@
     entry: bin/tf-docs.sh
     language: script
     files: (README\.md|\.tf)$
-    types: [terraform, markdown]
+    types_or: [terraform, markdown]
 
 -   id: tf-fmt
     name: Check TF Format
