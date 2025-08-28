@@ -13,5 +13,5 @@ fi
 
 echo "Running $(basename "${0}") pre-commit checks..."
 for FILE in "${@}"; do
-  terraform-docs fmt "${FILE}"
+  terraform-docs markdown "$(dirname "${FILE}")" >/dev/null
 done
