@@ -11,8 +11,8 @@
     description: This hook checks Terraform Markdown docs are generated
     entry: bin/tf-docs.sh
     language: script
-    files: README.md
-    types: [text]
+    files: (README\.md|\.tf)$
+    types: [terraform, markdown]
 
 -   id: tf-fmt
     name: Check TF Format
