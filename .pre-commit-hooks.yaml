@@ -6,9 +6,17 @@
     files: secrets.yml
     types: [text]
 
+-   id: tf-docs
+    name: Check TF Docs
+    description: This hook checks Terraform Markdown docs are generated
+    entry: bin/tf-docs.sh
+    language: script
+    files: README.md
+    types: [text]
+
 -   id: tf-fmt
     name: Check TF Format
-    description: This hook checks Terraform is formatteed correctly
+    description: This hook checks Terraform is formatted correctly
     entry: bin/tf-fmt.sh
     language: script
     files: \.(tf)$
