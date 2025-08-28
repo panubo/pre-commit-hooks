@@ -14,7 +14,7 @@ is_encrypted() {
   fi
 }
 
-echo "Running pre-commit checks..."
+echo "Running $(basename "${0}") pre-commit checks..."
 for FILE in "${@}"; do
   git diff --cached --name-only | grep "${FILE}" | while IFS= read -r line; do
     is_encrypted "${line}"

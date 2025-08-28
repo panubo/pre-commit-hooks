@@ -12,7 +12,7 @@ if ! command -v tflint >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Running pre-commit checks..."
+echo "Running $(basename "${0}") pre-commit checks..."
 for FILE in "${@}"; do
   tflint --filter="${FILE}"
 done

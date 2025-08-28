@@ -15,7 +15,7 @@ else
   exit 1
 fi
 
-echo "Running pre-commit checks..."
+echo "Running $(basename "${0}") pre-commit checks..."
 for FILE in "${@}"; do
   ${TF_CMD} fmt "${FILE}"
 done
