@@ -13,5 +13,8 @@ fi
 
 echo "Running $(basename "${0}") pre-commit checks..."
 for FILE in "${@}"; do
-  terraform-docs markdown "$(dirname "${FILE}")" >/dev/null
+  DIR=$(dirname "${FILE}")
+  if [ -e "${DIR}/README.md" ]; then
+    terraform-docs markdown "$(dirname "${FILE}")" >/dev/null
+  fi
 done
