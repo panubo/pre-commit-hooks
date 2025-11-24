@@ -49,3 +49,10 @@
     entry: quay.io/helmpack/chart-testing:v3.8.0 sh -c 'export HOME=/tmp; git config --global --add safe.directory /src; ct lint'
     files: ^charts/
     pass_filenames: false
+
+-   id: tf-lock
+    name: Update TF lock files
+    description: This hook runs "tofu providers lock -platform=linux_amd64" for any update .terraform.lock.hcl files to support CI
+    entry: bin/tf-lock.sh
+    language: script
+    files: .terraform.lock.hcl$
