@@ -13,7 +13,7 @@ fi
 
 echo "Running $(basename "${0}") pre-commit checks..."
 for FILE in "${@}"; do
-  pushd "$(basedir "${FILE}")"
+  pushd "$(dirname "${FILE}")"
   tofu providers lock -platform=linux_amd64
   popd
 done
