@@ -15,6 +15,9 @@
 
 set -e
 
+# Paths relative to the git repository root to exclude from processing.
+EXCLUDE_PATHS=("modules/")
+
 # Default action is to warn
 ACTION=${TF_LOCAL_MODULE_ACTION:-block}
 
@@ -24,9 +27,15 @@ found_local_module=0
 # Regex to find local module sources
 # Looks for source = "./", source = "../"
 # It handles spaces around '='.
-regex='source\s*=\s*"\.\.?/'
+regex='^\s*[^#\r\n]*source\s*=\s*"\.\.?/'
 
 for file in "$@"; do
+    for exclude_path in "${EXCLUDE_PATHS[@]}"; do
+        if [[ "$file" == "$exclude_path"* ]]; then
+            continue 2
+        fi
+    done
+
     if grep -q -E "$regex" "$file"; then
         echo "[WARNING] Found local Terraform module reference in $file" >&2
         grep -n -E "$regex" "$file" | sed 's/^/    /' >&2
