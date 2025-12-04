@@ -57,8 +57,8 @@
     language: script
     files: .terraform.lock.hcl$
 
--   id: terraform-local-module-check
-    name: Terraform local module check
+-   id: tf-local-module-check
+    name: TF local module check
     description: Checks for local module references in Terraform files.
     entry: bin/tf-local-module.sh
     language: script
