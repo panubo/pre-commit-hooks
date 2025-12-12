@@ -64,3 +64,10 @@
     language: script
     files: \.tf$
     require_serial: true
+
+-   id: tf-sensitive-output-check
+    name: TF sensitive outputs check
+    description: Checks that sensitive outputs are set as sensitive in Terraform files.
+    entry: bin/tf-check-sensitive-output.sh
+    language: script
+    files: \.tf$
